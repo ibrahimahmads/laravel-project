@@ -1,4 +1,4 @@
-# ProdHub - Simple Product Management (CRUD & Auth)
+# Laravel Project Prodhub - Simple Product Management (CRUD & Auth)
 
 ProdHub is a lightweight, modern web application built with Laravel 11 designed for internal product inventory management. This project features secure user authentication (Login and Registration) and complete CRUD (Create, Read, Update, Delete) capabilities to manage product data effortlessly. 
 
@@ -50,26 +50,42 @@ Open your terminal (or Git Bash), navigate to your web server directory (e.g., `
 ```bash
 git clone [https://github.com/ibrahimahmads/laravel-project.git](https://github.com/ibrahimahmads/laravel-project.git)
 cd laravel-project
-# Install PHP dependencies
+```
+
+# 2. Install PHP dependencies & Node.js dependencies
+```bash
 composer install
-
-# Install Node.js dependencies
 npm install
+```
 
-# make your .env
+# 3. make your .env
+```bash
 cp .env.example .env
+```
 
-# make database in php myadmin with name crud_login or same like your env
+### 4. Prepare the Local Database
+1. Open your **XAMPP Control Panel** and start both **Apache** and **MySQL** modules.
+2. Open your web browser and navigate to: `http://localhost/phpmyadmin/`
+3. Click on the **"New"** button located at the top of the left sidebar.
+4. In the **Database name** field, type the exact name that matches your `.env` configuration (e.g., `laravel_project`).
+5. Ensure the collation is set to default (usually `utf8mb4_general_ci`), then click the **"Create"** button.
 
-# generate application encryption key
+# 5. generate application encryption key
+```bash
 php artisan key:generate
+```
 
-# run database migrations
+# 6. run database migrations
+```bash
 php artisan migrate
+```
 
-# Compile and build production-ready Tailwind CSS assets
+# 7. Compile and build production-ready Tailwind CSS assets
+```bash
 npm run build
+```
 
-# Launch the local server
+# 8. Launch the local server
+```bash
 php artisan serve
 ```
