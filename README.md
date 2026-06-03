@@ -59,6 +59,11 @@ npm install
 # make your .env
 cp .env.example .env
 
+# make database in php myadmin with name crud_login or same like your env
+
+# generate application encryption key
+php artisan key:generate
+
 # run database migrations
 php artisan migrate
 
